@@ -1,0 +1,22 @@
+clear
+reset 
+set term postscript eps enhanced color
+
+unset key
+
+set ylabel 'Excitation Probability'
+set xlabel 'Blockade radius to 1/e^2 beam radius'
+
+set out 'bothradiiscaled.eps'
+plot '1dradii.dat' using ($1/20):2, '2dradii.dat' using ($1/20):2, '2dradij.dat' using ($1/20):2, '1dradij.dat' using ($1/20):2
+
+set out '1drad.eps'
+plot '1dradii.dat' using ($1*(2)/10):2
+
+
+set out '2drad.eps'
+plot '2dradii.dat' using ($1*(2)/10):2
+
+
+## using ($1/20):2
+## takes regular gaussian sigma and rescales to 1/e^2 definition of exponential
