@@ -9,3 +9,4 @@ Files of interest:
  * `*.eps` - plot outputs
  * `*.dat` - pata outputs for plotting
  * `bradii.cpp` - main source code
+ * `plot.txt` - for use with gnuplot
